@@ -3,8 +3,7 @@ layout: post
 title: A Demo of BING(objectness estimation)
 ---
 
-* content
-{:toc}
+{% include JB/setup %}
 
 ## Abstract
 
@@ -37,7 +36,7 @@ disp(w');
 
 //print all beta and vecA 
 for ii = 1 : dim
-	fprintf('beta(%d) = %f, \na{%d} = ', ii, beta(ii), ii);
+	fprintf('beta(\%d) = \%f, \na{\%d} = ', ii, beta(ii), ii);
 	//disp(beta(ii));
 	disp(a{ii}');
 end
