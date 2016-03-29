@@ -19,7 +19,7 @@ title: A Demo of BING(objectness estimation)
 ```
 d = 4; 
 
-Nw = 8; \%Nw <= 2^d
+Nw = 8; %Nw <= 2^d
 Ng = 8; \%Ng<=8, for the reason that each pixel is 8 bits in [0,255]
 
 \%set w and b for explanation 
