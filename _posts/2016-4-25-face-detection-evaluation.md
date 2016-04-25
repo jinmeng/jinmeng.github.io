@@ -13,7 +13,7 @@ title: 人脸检测算法性能评估、综述及进展
 
 本文是在后面给出的网页的基础上整理出来的，做了一些修改和扩充。
 
-#1.    性能指标概念介绍
+## 1.    性能指标概念介绍
 　　先考虑下面的例子。假定某个班级有100人，其中男生80人，女生20人，目标是找出所有女生。某人挑选出50个人，除了所有女生之外，还把30个男生当成了女生。如何评估他的工作？
 　　
     首先可以用准确率（Accuracy）作为衡量标准。对于给定的测试数据集，准确率就是分类器正确分类的样本个数在总样本数中所占的比例，也就是损失函数是0-1损失时测试数据集上的准确率。简单来说，前面的例子中有80男生和20女生，而某人（也就是定义中的分类器）的分类结果是50男生和50女生。Accuracy指的是他分正确的人占总人数的比例。容易得到，他把其中70人（20女+50男）判定正确了，而总人数是100人，所以他的Accuracy就是70%。
@@ -25,7 +25,7 @@ title: 人脸检测算法性能评估、综述及进展
   
 通过这张表，可以很容易得到例子中这几个分类的值: TP=20, FP=30, FN=0, TN=50
 
-#2.	指标定义
+## 2.	指标定义
 1)	True Negative Rate（TNR、真阴性率或特异度specificity）：
 TNR = TN /（FP + TN）
 2)	False Positive Rate（FPR、假阳性率或误报率）：
@@ -70,7 +70,7 @@ P/R和ROC是两个不同的评价指标和计算方式，一般情况下，检�
 
 
 
-#3.	人脸测评数据库
+## 3.	人脸测评数据库
 1)	Face Detection Data Set and Benchmark（FDDB）
 网址：http://vis-www.cs.umass.edu/fddb/results.html
 路径：z:\User\team02\Face_DB\FDDB\
@@ -92,7 +92,7 @@ WIDER FACE数据库由香港中文大学的汤晓鸥老师所在的实验室创�
 IJB-A dataset: IJB-A is proposed for face detection and face recognition. IJB-A contains 24,327 images and 49,759 faces.
 AFW dataset: AFW dataset is built using Flickr images. It has 205 images with 473 labeled faces. For each face, annotations include a rectangular bounding box, 6 landmarks and the pose angles.
 
-#4.	人脸检测综述
+## 4.	人脸检测综述
 
 1)	2010年微软zhang cha和张正友撰写的人脸检测的综述报告
        [MSR-TR-2010] A_survey_of_recent_advances_in_face_detection
@@ -106,7 +106,7 @@ AFW dataset: AFW dataset is built using Flickr images. It has 205 images with 47
 •	始终有15~20%的性能Gap，即使允许一个相对较大的FP(大约1000）,始终有15~10%的人脸无法被检测到。需要特别指出的是这些Gap主要是由于是失焦的人脸（比如模糊的人脸）。
 •	在这个Benchmark中，最好的基于boosting技术和最好的基于DPM的技术是比较接近的。当然最好的技术还是boosting和DPM组合在一起的性能。（这个就是指的[ECCV 2014] Joint Cascade Face Detection and Alignment）
 
-#5.	人脸检测最新进展
+## 5.	人脸检测最新进展
 1)	Face Detection with a 3D Model.   A. Barbu, N. Lay, G. Gramajo.
 2)	A Convolutional Neural Network Cascade for Face Detection. H. Li , Z. Lin , X. Shen, J. Brandt and G. Hua. [CVPR2015]
 3)	Multi-view Face Detection Using Deep Convolutional Neural Networks. S. S. Farfade, Md. Saberian and Li-Jia Li. [ICMR 2015]  （yahoo的人脸检测）
@@ -116,7 +116,7 @@ AFW dataset: AFW dataset is built using Flickr images. It has 205 images with 47
 7)	The fastest deformable part model for object detection J. Yan, Z. Lei, L. Wen, S. Z. Li
 8)	Joint Cascade Face Detection and Alignment. ECCV 2014. D. Chen, S. Ren, Y. Wei, X. Cao, J. Sun. [ECCV 2014]
 
-#6.	参考网页
+## 6.	参考网页
 http://www.cvrobot.net/recall-precision-false-positive-false-negative/
 http://blog.csdn.net/yechaodechuntian/article/details/37394967
 http://www.cvrobot.net/latest-progress-in-face-detection-2015/
